@@ -48,10 +48,11 @@ public class SpellChecker {
 		String correctWord = word;
 		int min = threshold;
 		for(int i = 0; i < dictionary.length; i++){
-			if(levenshtein(word, dictionary[i]) <= min){
+			if(levenshtein(word, dictionary[i]) == min){
 				correctWord = dictionary[i];
 				if(levenshtein(word, dictionary[i]) < min){
-					min =levenshtein(word, dictionary[i]);
+					correctWord = dictionary[i];
+					min = levenshtein(word, dictionary[i]);
 				}
 			}
 		}
