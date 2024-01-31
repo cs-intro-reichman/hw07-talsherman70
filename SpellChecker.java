@@ -51,7 +51,6 @@ public class SpellChecker {
 			if(levenshtein(word, dictionary[i]) == min){
 				correctWord = dictionary[i];
 				if(levenshtein(word, dictionary[i]) < min){
-					correctWord = dictionary[i];
 					min = levenshtein(word, dictionary[i]);
 				}
 			}
